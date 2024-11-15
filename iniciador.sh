@@ -1,4 +1,3 @@
-#!/bin/bash
 apt update
 
 apt install docker.io docker-compose
@@ -8,7 +7,6 @@ docker-compose build
 echo "Iniciando el contenedor..."
 docker-compose up -d
 
-#!/bin/bash
 echo "Uso de recursos del contenedor:"
 docker stats --no-stream --format "table {{.Name}}\t{{.MemUsage}}\t{{.BlockIO}}"
 

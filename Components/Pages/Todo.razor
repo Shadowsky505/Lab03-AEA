@@ -1,10 +1,7 @@
 ﻿@page "/todo"
 @rendermode InteractiveServer
-
 <PageTitle> Todo Page </PageTitle>
-
 <h3>Todo</h3>
-
 <ul>
     @foreach (var todo in todos)
     {
@@ -14,15 +11,11 @@
         </li>
     }
 </ul>
- 
 <input @bind="newTodo"/>
 <button @onclick="AddTodo">Add Todo</button>
-
 <h3>Todo (@todos.Count(todo => !todo.IsDone))</h3>
-
 @code {
     private List<TodoItem> todos = new();
-
     string newTodo = "";
     void AddTodo()
     {
@@ -32,5 +25,7 @@
             newTodo = string.Empty;
         }
     }
-
 }
+
+
+
